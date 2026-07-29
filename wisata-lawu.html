@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revitalisasi Jalur Wisata & Sentra Kuliner Unggulan Lereng Lawu - Wisata Lawu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            overflow-x: hidden; 
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-emerald-700 flex items-center gap-2">
+                        <i class="fa-solid fa-mountain-sun"></i> Wisata Lawu
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center font-medium">
+                    <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition">About</a>
+                    <a href="paket.html" class="text-gray-600 hover:text-emerald-600 transition">Paket</a>
+                    <a href="fasilitas.html" class="text-gray-600 hover:text-emerald-600 transition">Fasilitas</a>
+                    <a href="blog.html" class="text-emerald-600 font-semibold transition">Blog</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn-2" class="text-gray-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu-2" class="hidden md:hidden bg-white border-t px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block py-2 text-gray-600">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600">About</a>
+            <a href="paket.html" class="block py-2 text-gray-600">Paket</a>
+            <a href="fasilitas.html" class="block py-2 text-gray-600">Fasilitas</a>
+            <a href="blog.html" class="block py-2 text-emerald-600 font-semibold">Blog</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="bg-white text-gray-950 pt-28 pb-4">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex text-sm" aria-label="Breadcrumb">
+                <span class="inline-flex items-center space-x-2">
+                    <a href="index.html" class="hover:text-gray-600 transition">Home</a>
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+                    <a href="blog.html" class="hover:text-gray-600 transition">Blog</a>
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i>
+                    <span class="text-gray-500 font-medium truncate max-w-xs sm:max-w-md">Revitalisasi Jalur Wisata & Sentra Kuliner</span>
+                </span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- HEADER / H1 -->
+    <header class="pb-3 bg-white text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Destinasi & Kuliner</span>
+            <span class="text-gray-500 mr-4"><i class="fa-regular fa-calendar-alt mr-1"></i> 28 Juli 2026</span>
+            <span class="text-gray-500"><i class="fa-regular fa-clock mr-1"></i> 7 Menit Membaca</span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-3 leading-tight">
+                Revitalisasi Jalur Wisata & Sentra Kuliner Unggulan Lereng Lawu
+            </h1>
+        </div>
+    </header>
+
+    <!-- GAMBAR UTAMA -->
+    <main class="py-6 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <img src="Revitalisasi.webp" alt="Revitalisasi Jalur Wisata Lereng Lawu" class="w-full h-[400px] object-cover">
+                <div class="p-3 bg-gray-50 text-center text-xs text-gray-500 italic">Pemandangan kawasan pegunungan Lereng Lawu yang kini semakin tertata rapi, asri, dan ramah wisatawan domestik maupun mancanegara.</div>
+            </div>
+
+            <!-- TOC OTOMATIS BUKA TUTUP -->
+            <div class="my-10 bg-emerald-50/70 border border-emerald-200 rounded-2xl p-6 shadow-sm">
+                <div class="flex justify-between items-center cursor-pointer select-none" id="toc-toggle-btn-2">
+                    <h2 class="text-lg font-bold text-emerald-900 flex items-center gap-2 m-0">
+                        <i class="fa-solid fa-list-ul text-emerald-600"></i> Daftar Isi (Table of Contents)
+                    </h2>
+                    <button class="text-emerald-700 text-sm font-semibold focus:outline-none flex items-center gap-1">
+                        <span id="toc-toggle-text-2">Tutup</span> <i class="fa-solid fa-chevron-up transition-transform duration-300" id="toc-icon-2"></i>
+                    </button>
+                </div>
+                <div id="toc-content-2" class="mt-4 pt-4 border-t border-emerald-200/60 transition-all duration-300">
+                    <ul class="space-y-2 text-sm text-emerald-950 font-medium">
+                        <li><a href="#pendahuluan" class="hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-600"></i> Pendahuluan: Wajah Baru Pariwisata Lereng Lawu</a></li>
+                        <li><a href="#penataan-infrastruktur" class="hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-600"></i> 1. Penataan Infrastruktur & Jalur Akses Wisata</a></li>
+                        <li class="pl-4"><a href="#standar-keamanan" class="hover:text-emerald-700 hover:underline flex items-center gap-2 text-xs text-gray-700"><i class="fa-solid fa-angle-right text-emerald-600"></i> Peningkatan Standar Keamanan Jalur Ekstrem</a></li>
+                        <li><a href="#sentra-kuliner" class="hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-600"></i> 2. Integrasi Sentra Kuliner Khas Lereng Lawu</a></li>
+                        <li class="pl-4"><a href="#kuliner-unggulan" class="hover:text-emerald-700 hover:underline flex items-center gap-2 text-xs text-gray-700"><i class="fa-solid fa-angle-right text-emerald-600"></i> Ragam Kuliner Hangat Penghilang Dingin</a></li>
+                        <li><a href="#ekowisata-umkm" class="hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-600"></i> 3. Konsep Ekowisata & Pemberdayaan UMKM Lokal</a></li>
+                        <li><a href="#kesimpulan" class="hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-600"></i> Kesimpulan</a></li>
+                        <li><a href="#faq" class="hover:underline flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-600"></i> Tanya Jawab (FAQ)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- KONTEN ARTIKEL UTAMA ( > 900 KATA) -->
+            <article class="prose prose-emerald max-w-none text-gray-700 leading-relaxed space-y-6 text-base sm:text-lg">
+                <h2 id="pendahuluan" class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-l-4 border-emerald-600 pl-4 pt-2">Pendahuluan: Wajah Baru Pariwisata Lereng Lawu</h2>
+                <p class="font-medium text-xl text-gray-900 leading-relaxed">
+                    Kawasan wisata lereng Gunung Lawu, terutama koridor Tawangmangu di Kabupaten Karanganyar hingga Ngargoyoso dan Plaosan di Magetan, kembali mengalami babak transformasi pembangunan infrastruktur pariwisata yang masif. Pemerintah daerah bersama para pelaku pariwisata lokal dan masyarakat menggalakkan program <strong>Revitalisasi Jalur Wisata & Sentra Kuliner Unggulan Lereng Lawu</strong> demi mendongkrak kenyamanan, keamanan, serta pengalaman berkesan bagi para pelancong domestik maupun mancanegara yang berkunjung setiap pekannya.
+                </p>
+                <p>
+                    Gunung Lawu yang berdiri megah di perbatasan Provinsi Jawa Tengah dan Jawa Timur selalu menjadi magnet utama liburan pegunungan di pulau Jawa. Dengan udara sejuk berkisar antara 15 hingga 20 derajat Celsius, panorama hamparan kebun teh yang hijau menyejukkan mata, serta jejak sejarah purbakala peninggalan kerajaan Hindu-Buddha yang memesona, kawasan ini kini berbenah total secara menyeluruh. Proyek revitalisasi ini dirancang tidak hanya untuk memperindah estetika visual kawasan semata, tetapi juga menyelesaikan berbagai tantangan klasik yang kerap dikeluhkan wisatawan, seperti kemacetan arus lalu lintas di akhir pekan, penataan pedagang kaki lima yang kurang tertib, hingga standarisasi fasilitas umum agar berstandar internasional.
+                </p>
+                <p>
+                    Melalui masterplan pembangunan pariwisata terpadu, pemerintah mengalokasikan anggaran khusus untuk merombak wajah pariwisata Lawu agar lebih kompetitif. Pendekatan yang digunakan berbasis pada kelestarian ekosistem alam, pemberdayaan ekonomi kerakyatan melalui UMKM lokal, serta pemanfaatan teknologi digital dalam hal pelayanan publik dan perizinan wisata. Transformasi ini diharapkan mampu menjadikan kawasan Lereng Lawu sebagai destinasi pariwisata pegunungan unggulan berkelas dunia yang tetap mempertahankan keaslian budaya serta kearifan lokal masyarakat setempat yang ramah dan bersahaja.
+                </p>
+
+                <!-- BACA JUGA PERTAMA -->
+                <div class="my-6 p-4 bg-gray-50 border-l-4 border-lime-500 rounded-r-xl shadow-xs">
+                    <p class="text-sm font-semibold text-gray-800 m-0 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-emerald-600"></i> Baca juga: 
+                        <a href="e-ticketing-lawu.html" class="text-emerald-700 hover:underline font-bold">Pemberlakuan Sistem E-Ticketing & Pendaftaran Online Pendakian Lawu Terbaru</a>
+                    </p>
+                </div>
+
+                <h2 id="penataan-infrastruktur" class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-emerald-600 pl-4 pt-2">1. Penataan Infrastruktur dan Jalur Akses Wisata</h2>
+                <p>
+                    Aksesibilitas adalah kunci utama kemajuan pariwisata pegunungan modern. Dalam program revitalisasi tahun ini, akses jalan utama yang menghubungkan kota Solo menuju kawasan Tawangmangu dan tembus ke Magetan mengalami pelebaran koridor di beberapa titik krusial yang selama ini kerap menjadi titik kemacetan parah. Perbaikan sistem drainase pinggir jalan juga digencarkan untuk mencegah terjadinya limpasan air hujan ke badan jalan yang kerap membahayakan pengguna kendaraan bermotor.
+                </p>
+                <p>
+                    Selain pelebaran, pemasangan fasilitas pendukung keselamatan berkendara seperti lampu penerangan jalan umum (PJU) berbasis tenaga surya di titik-titik minim cahaya, pemasangan marka jalan reflektif yang menyala terang di malam hari, serta pembangunan kantong-kantong parkir terpadu berkapasitas besar turut diselesaikan. Langkah ini diambil untuk memastikan kendaraan bus pariwisata maupun kendaraan pribadi dapat memarkirkan kendaraannya dengan aman tanpa mengganggu kelancaran arus lalu lintas utama di jalur pegunungan yang sempit dan berliku.
+                </p>
+
+                <h3 id="standar-keamanan" class="text-xl font-bold text-gray-800 mt-6 mb-3">Peningkatan Standar Keamanan Jalur Ekstrem</h3>
+                <p>
+                    Aspek keselamatan berkendara di jalur pegunungan yang memiliki kontur menanjak curam serta tikungan tajam mematikan (seperti jalur Cemorosewu dan jalur turunan tajam Plaosan) mendapat perhatian luar biasa serius dari tim teknis gabungan. Pemasangan guardrail (pagar pengaman jalan) berbahan baja galur ganda kualitas tinggi, pembangunan jalur penyelamat darurat (emergency slip lane) untuk mengantisipasi kendaraan mengalami rem blong, penempatan cermin tikungan cembung pintar, serta penambahan rambu peringatan evakuasi bencana alam telah diselesaikan di sepanjang jalur rawan kecelakaan.
+                </p>
+
+                <!-- BLOCKQUOTE -->
+                <blockquote class="my-8 p-6 bg-emerald-900 text-emerald-50 rounded-2xl border-l-8 border-lime-400 italic shadow-md">
+                    <p class="text-lg font-medium leading-relaxed mb-3">
+                        "Revitalisasi jalur wisata Lereng Lawu bukan sekadar proyek fisik memperindah jalan atau bangunan, melainkan komitmen jangka panjang untuk menghadirkan pariwisata yang aman, berkelanjutan, dan menyejahterakan masyarakat lokal secara nyata."
+                    </p>
+                    <footer class="text-sm font-semibold text-lime-300 not-italic">
+                        — Dinas Pariwisata & Kebudayaan Karanganyar
+                    </footer>
+                </blockquote>
+
+                <h2 id="sentra-kuliner" class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-emerald-600 pl-4 pt-2">2. Integrasi Sentra Kuliner Khas Lereng Lawu</h2>
+                <p>
+                    Liburan ke kawasan pegunungan tentu tidak akan terasa lengkap tanpa memanjakan lidah dengan berbagai hidangan kuliner tradisional yang mampu menghangatkan tubuh di tengah hawa dingin ekstrem. Melalui program penataan ini, lapak-lapak pedagang kuliner tradisional di Pasar Wisata Tawangmangu serta kawasan kuliner Ngargoyoso ditata ulang secara total menjadi sentra kuliner yang bersih, higienis, tertata rapi, serta mengusung konsep tempat makan terbuka dengan latar belakang pemandangan lembah gunung yang menakjubkan.
+                </p>
+
+                <!-- FOTO PENDUKUNG LAIN -->
+                <div class="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
+                        <img src="tempat kuliner1.webp" alt="Sentra Kuliner Lereng Lawu" class="w-full h-56 object-cover">
+                        <div class="p-3 bg-gray-50 text-xs text-gray-600 text-center">Sentra kuliner higienis baru yang menyajikan aneka hidangan hangat khas pegunungan.</div>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
+                        <img src="tempat kuliner2.webp" alt="Kuliner Sate Karang Tawangmangu" class="w-full h-56 object-cover">
+                        <div class="p-3 bg-gray-50 text-xs text-gray-600 text-center">Sate khas Tawangmangu yang dibakar dengan arang batok kelapa dan bumbu kacang gurih khas.</div>
+                    </div>
+                </div>
+
+                <h3 id="kuliner-unggulan" class="text-xl font-bold text-gray-800 mt-6 mb-3">Ragam Kuliner Hangat Penghilang Dingin</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li><strong>Sate Karang & Sate Kelinci Tawangmangu:</strong> Disajikan hangat dengan bumbu kacang kental bercita rasa gurih manis yang sempurna dinikmati saat kabut tebal turun menyelimuti warung.</li>
+                    <li><strong>Sego Liwet Lawu:</strong> Nasi gurih beraroma rempah khas pedesaan disajikan lengkap dengan suwiran ayam kampung, opor, dan sambal terasi pedas penggugah selera.</li>
+                    <li><strong>Wedang Tahu & Ronde Joglo:</strong> Minuman herbal jahe hangat berpadu kembang tahu lembut atau bola ketan isi kacang yang mampu menghangatkan sekujur tubuh dari dinginnya malam pegunungan.</li>
+                    <li><strong>Teh Hitam & Teh Hijau Organik Lawu:</strong> Dipetik langsung dari perkebunan teh lereng gunung dengan cita rasa khas aromatik alami tanpa bahan pengawet buatan.</li>
+                </ul>
+
+                <!-- BACA JUGA KEDUA -->
+                <div class="my-6 p-4 bg-gray-50 border-l-4 border-lime-500 rounded-r-xl shadow-xs">
+                    <p class="text-sm font-semibold text-gray-800 m-0 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-emerald-600"></i> Baca juga: 
+                        <a href="karhutla-lawu.html" class="text-emerald-700 hover:underline font-bold">Mewaspadai Potensi Karhutla & Larangan Membawa Alat Pemicu Api di Kawasan Savana</a>
+                    </p>
+                </div>
+
+                <h2 id="ekowisata-umkm" class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-emerald-600 pl-4 pt-2">3. Konsep Ekowisata & Pemberdayaan UMKM Lokal</h2>
+                <p>
+                    Revitalisasi jalur wisata dan sentra kuliner ini mengusung pilar utama <em>Sustainable Tourism</em> (Pariwisata Berkelanjutan). Pemerintah daerah tidak hanya fokus membangun fasilitas fisik megah, melainkan juga memberikan pendampingan serta pelatihan intensif kepada para pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) lokal. Pelatihan mencakup manajemen higienitas pangan pengolahan makanan, penyusunan standar pelayanan prima kepada wisatawan, hingga digitalisasi sistem pembayaran menggunakan QRIS demi kemudahan transaksi non-tunai.
+                </p>
+
+                
+
+                <!-- KESIMPULAN -->
+                <h2 id="kesimpulan" class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-emerald-600 pl-4 pt-2">Kesimpulan</h2>
+                <p>
+                    Program <strong>Revitalisasi Jalur Wisata & Sentra Kuliner Unggulan Lereng Lawu</strong> menandai era baru pariwisata pegunungan Nusantara yang jauh lebih modern, bersih, aman, dan ramah keluarga. Dengan infrastruktur jalan yang semakin mantap, sentra kuliner higienis yang menggugah selera, serta pemberdayaan UMKM lokal yang berkelanjutan, kawasan Tawangmangu, Ngargoyoso, dan sekitarnya kini sangat siap menyambut kedatangan jutaan wisatawan dengan pengalaman berwisata yang aman, nyaman, dan pastinya tak terlupakan.
+                </p>
+
+                <!-- FAQ -->
+                <h2 id="faq" class="text-2xl font-bold text-gray-900 mt-10 mb-6 border-l-4 border-emerald-600 pl-4 pt-2">Tanya Jawab (FAQ) Seputar Wisata Lereng Lawu</h2>
+                <div class="space-y-4 not-prose">
+                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-xs">
+                        <button class="faq-btn w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-emerald-50 text-left font-bold text-gray-900 transition">
+                            <span>Kapan waktu terbaik untuk mengunjungi kawasan wisata Lereng Lawu?</span>
+                            <i class="fa-solid fa-chevron-down text-emerald-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 bg-white text-gray-700 text-sm border-t border-gray-100">
+                            Waktu terbaik adalah saat musim kemarau (bulan April hingga Oktober) ketika cuaca cerah dan panorama puncak gunung terlihat jelas tanpa terhalang kabut tebal.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-xl overflow-hidden shadow-xs">
+                        <button class="faq-btn w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-emerald-50 text-left font-bold text-gray-900 transition">
+                            <span>Kuliner apa saja yang paling ikonik di Tawangmangu dan Ngargoyoso?</span>
+                            <i class="fa-solid fa-chevron-down text-emerald-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden p-4 bg-white text-gray-700 text-sm border-t border-gray-100">
+                            Kuliner paling ikonik di kawasan ini meliputi Sate Karang, Sate Kelinci, Sego Liwet, serta Wedang Tahu hangat penghilang dingin.
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- BIO PENULIS -->
+            <div class="mt-14 p-6 sm:p-8 bg-emerald-50/80 border border-emerald-200 rounded-2xl flex flex-col sm:flex-row items-center gap-6 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="Foto Penulis" class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md flex-shrink-0">
+                <div>
+                    <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">Penulis Artikel</span>
+                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-2">Rania Puspita Sari, S.Par.</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Pengamat pariwisata pegunungan dan jurnalis senior yang telah mendedikasikan lebih dari 8 tahun untuk meliput perkembangan ekowisata, konservasi alam, serta pemberdayaan budaya lokal di kawasan Nusantara, khususnya jalur pendakian Gunung Lawu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SHARE ARTIKEL AKTIF (WA & SOSIAL MEDIA) -->
+            <div class="mt-10 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
+                    <span class="text-sm font-bold text-gray-800"><i class="fa-solid fa-share-nodes text-emerald-600 mr-1"></i> Bagikan Artikel Ini:</span>
+                    <a href="https://api.whatsapp.com/send?text=Baca%20artikel%20terbaru%20tentang%20Revitalisasi%20Jalur%20Wisata%20Lereng%20Lawu" target="_blank" class="px-4 py-2 rounded-xl bg-green-500 hover:bg-green-600 text-white font-medium text-xs sm:text-sm flex items-center gap-2 transition shadow-xs">
+                        <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs sm:text-sm flex items-center gap-2 transition shadow-xs">
+                        <i class="fa-brands fa-facebook-f text-base"></i> Facebook
+                    </a>
+                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link artikel berhasil disalin!');" class="px-4 py-2 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium text-xs sm:text-sm flex items-center gap-2 transition shadow-xs cursor-pointer">
+                        <i class="fa-solid fa-link text-base"></i> Salin Link
+                    </button>
+                </div>
+                <a href="blog.html" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-900 text-white font-medium text-sm transition">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Blog
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3 ARTIKEL TERKAIT -->
+    <section class="py-16 bg-gray-100 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase tracking-widest text-emerald-600 font-bold">Informasi Pilihan</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-1">Artikel Terkait Lainnya</h2>
+                <p class="text-gray-600 text-sm mt-2">Simak berbagai ulasan menarik seputar regulasi, tips keselamatan, dan destinasi Gunung Lawu.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Artikel 1 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <a href="e-ticketing-lawu.html">
+                            <img src="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?auto=format&fit=crop&q=80&w=600" alt="E-Ticketing Lawu" class="w-full h-48 object-cover hover:opacity-95 transition">
+                        </a>
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Regulasi Terbaru</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">
+                                <a href="e-ticketing-lawu.html" class="hover:text-emerald-600 transition">Pemberlakuan Sistem E-Ticketing & Pendaftaran Online Pendakian Lawu</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">Pengelola memperketat aspek keamanan dan manajemen pendaki melalui penerapan sistem reservasi digital di pos Cemoro Sewu.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-between items-center">
+                        <a href="e-ticketing-lawu.html" class="text-emerald-600 hover:text-emerald-700 font-semibold text-sm inline-flex items-center gap-1">
+                            Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artikel 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <a href="karhutla-lawu.html">
+                            <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&q=80&w=600" alt="Mitigasi Karhutla" class="w-full h-48 object-cover hover:opacity-95 transition">
+                        </a>
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Siaga Konservasi</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">
+                                <a href="karhutla-lawu.html" class="hover:text-emerald-600 transition">Mewaspadai Potensi Karhutla & Larangan Membawa Alat Pemicu Api</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">Petugas gabungan dan relawan menggalakkan pembuatan ilaran serta patroli ketat di kawasan savana untuk mengantisipasi kebakaran.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-between items-center">
+                        <a href="karhutla-lawu.html" class="text-emerald-600 hover:text-emerald-700 font-semibold text-sm inline-flex items-center gap-1">
+                            Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artikel 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <a href="blog.html">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600" alt="Keindahan Puncak Lawu" class="w-full h-48 object-cover hover:opacity-95 transition">
+                        </a>
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Tips Pendakian</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">
+                                <a href="blog.html" class="hover:text-emerald-600 transition">Panduan Lengkap Pendakian Gunung Lawu via Cemoro Sewu & Candi Cetho</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">Kenali estimasi waktu tempuh, tingkat kesulitan jalur, serta perlengkapan wajib yang harus dibawa saat mendaki ke puncak.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-between items-center">
+                        <a href="blog.html" class="text-emerald-600 hover:text-emerald-700 font-semibold text-sm inline-flex items-center gap-1">
+                            Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-mountain-sun text-emerald-500"></i> Wisata Lawu
+                    </h3>
+                    <p class="text-sm">Platform informasi lengkap dan penyedia paket wisata resmi serta pendakian Gunung Lawu.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Menu Utama</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="paket.html" class="hover:text-white transition">Paket Wisata</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Destinasi Populer</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Puncak Hargo Dumilah</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Candi Cetho & Sukuh</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Cemoro Sewu & Kandang</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontak Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-location-dot mr-2 text-emerald-500"></i> Karanganyar & Magetan</li>
+                        <li><i class="fa-solid fa-phone mr-2 text-emerald-500"></i> +62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope mr-2 text-emerald-500"></i> info@wisatalawu.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 Wisata Lawu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP & TOP MELAYANG -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20butuh%20informasi%20wisata%20Gunung%20Lawu" target="_blank" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition transform hover:scale-110" title="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button id="back-to-top-2" class="hidden bg-emerald-700/60 hover:bg-emerald-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition transform hover:scale-110 backdrop-blur-sm" title="Kembali ke Atas">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- SCRIPT INTERAKTIF (TOC, MOBILE MENU, FAQ, BACK TO TOP) -->
+    <script>
+        const menuBtn2 = document.getElementById('menu-btn-2');
+        const mobileMenu2 = document.getElementById('mobile-menu-2');
+        menuBtn2.addEventListener('click', () => { mobileMenu2.classList.toggle('hidden'); });
+
+        const backToTopBtn2 = document.getElementById('back-to-top-2');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { backToTopBtn2.classList.remove('hidden'); } else { backToTopBtn2.classList.add('hidden'); }
+        });
+        backToTopBtn2.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        const tocToggleBtn2 = document.getElementById('toc-toggle-btn-2');
+        const tocContent2 = document.getElementById('toc-content-2');
+        const tocToggleText2 = document.getElementById('toc-toggle-text-2');
+        const tocIcon2 = document.getElementById('toc-icon-2');
+
+        tocToggleBtn2.addEventListener('click', () => {
+            tocContent2.classList.toggle('hidden');
+            if (tocContent2.classList.contains('hidden')) {
+                tocToggleText2.textContent = 'Buka';
+                tocIcon2.style.transform = 'rotate(180deg)';
+            } else {
+                tocToggleText2.textContent = 'Tutup';
+                tocIcon2.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                content.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

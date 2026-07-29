@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Lawu - Pesona Keindahan & Pendakian Gunung Lawu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            overflow-x: hidden; /* Mencegah layar bergoyang ke samping di HP */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Brand / Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-emerald-700 flex items-center gap-2">
+                        <i class="fa-solid fa-mountain-sun"></i> Wisata Lawu
+                    </a>
+                </div>
+                <!-- Nav Links -->
+                <div class="hidden md:flex space-x-8 items-center font-medium">
+    <a href="index.html" class="text-emerald-600 font-semibold transition">Home</a>
+    <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition">About</a>
+    <a href="paket.html" class="text-gray-600 hover:text-emerald-600 transition">Paket</a>
+    <a href="fasilitas.html" class="text-gray-600 hover:text-emerald-600 transition">Fasilitas</a>
+    <a href="blog.html" class="text-gray-600 hover:text-emerald-600 transition">Blog</a>
+</div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 pt-2 pb-4 space-y-2">
+    <a href="index.html" class="block py-2 text-emerald-600 font-semibold">Home</a>
+    <a href="about.html" class="block py-2 text-gray-600">About</a>
+    <a href="paket.html" class="block py-2 text-gray-600">Paket</a>
+    <a href="fasilitas.html" class="block py-2 text-gray-600">Fasilitas</a>
+    <a href="blog.html" class="block py-2 text-gray-600">Blog</a>
+</div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Gunung_lawu.webp');">
+        <div class="max-w-4xl px-4 mt-12">
+            <span class="bg-emerald-600 text-xs uppercase tracking-widest px-3 py-1 rounded-full font-semibold mb-4 inline-block">Jelajahi wisata gunung lawu</span>
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Pesona Keagungan Gunung Lawu</h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-8">Nikmati keindahan alam, wisata sejarah, dan petualangan mendaki gunung legendaris di perbatasan Jawa Tengah dan Jawa Timur.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="paket.html" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3.5 rounded-full shadow-lg transition">Lihat Paket Wisata</a>
+                <a href="about.html" class="bg-white/25 hover:bg-white/40 backdrop-blur-md text-white font-semibold px-8 py-3.5 rounded-full transition border border-white/30">Pelajari Lawu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS, COUNTER, & STATISTICS SECTION -->
+    <section class="bg-emerald-900 text-white py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-2 border-r border-emerald-800 last:border-none">
+                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 text-slate-200"><span class="counter" data-target="3265">0</span><span class="text-lg sm:text-xl"> mdpl</span></div>
+                    <div class="text-xs sm:text-sm text-slate-200 uppercase tracking-wider">Ketinggian Puncak</div>
+                </div>
+                <div class="p-2 border-r border-emerald-800 last:border-none">
+                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 text-slate-200"><span class="counter" data-target="4">0</span><span>+</span></div>
+                    <div class="text-xs sm:text-sm text-slate-200 uppercase tracking-wider">Jalur Pendakian</div>
+                </div>
+                <div class="p-2 border-r border-emerald-800 last:border-none">
+                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 text-slate-200"><span class="counter" data-target="15">0</span><span>+</span></div>
+                    <div class="text-xs sm:text-sm text-slate-200 uppercase tracking-wider">Destinasi Wisata</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 text-slate-200"><span class="counter" data-target="10000">0</span><span>+</span></div>
+                    <div class="text-xs sm:text-sm text-slate-200 uppercase tracking-wider">Pendaki / Bulan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-emerald-600 font-semibold tracking-wider text-sm uppercase">Tentang Gunung Lawu</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">Gunung Mistis Penuh Sejarah dan Keindahan Alam yang Menakjubkan</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Gunung Lawu (3.265 mdpl) terletak di perbatasan Kabupaten Karanganyar (Jawa Tengah) dan Kabupaten Magetan (Jawa Timur). Gunung ini terkenal tidak hanya karena keindahan savana dan pemandangannya yang luar biasa, tetapi juga kaya akan nilai sejarah dan spiritualitas.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Di lereng-lerengnya terdapat objek wisata populer seperti Candi Cetho, Candi Sukuh, Air Terjun Grojogan Sewu, Telaga Sarangan, serta jalur pendakian ikonik seperti Cemoro Sewu dan Cemoro Kandang.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i>
+                            <span class="font-medium text-gray-700">Puncak Hargo Dumilah</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i>
+                            <span class="font-medium text-gray-700">Wisata Pegunungan Asri</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i>
+                            <span class="font-medium text-gray-700">Situs Sejarah & Candi</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-emerald-600 text-xl"></i>
+                            <span class="font-medium text-gray-700">Spot Sunrise & Sunset Terbaik</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                    <img src="Lawu1.webp" alt="Lawu Mountain" class="rounded-2xl shadow-lg w-full h-80 sm:h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES & PRODUCTS SECTION (PAKET WISATA) -->
+    <section id="paket" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold tracking-wider text-sm uppercase">Layanan & Produk</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Paket Wisata & Pendakian Lawu</h2>
+                <p class="text-gray-600 mt-2">Pilih paket petualangan dan rekreasi terbaik yang sesuai dengan kebutuhan liburan Anda di Gunung Lawu.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Paket 1 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <img src="Open Trip Pendakian Lawu.webp" alt="Pendakian" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full">Adventure</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2">Open Trip Pendakian Lawu</h3>
+                            <p class="text-gray-600 text-sm mb-4">Pendakian via Cemoro Sewu / Kandang dipandu oleh guide profesional lengkap dengan logistik dan tenda.</p>
+                            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Tiket Masuk & Perizinan</li>
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Tenda & Alat Masak</li>
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Mountain Guide Berpengalaman</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-4">
+                        <span class="text-xl font-bold text-emerald-700">Rp 450.000 <span class="text-xs font-normal text-gray-500">/ orang</span></span>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Pendakian%20Lawu" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 transition">Pesan</a>
+                    </div>
+                </div>
+                <!-- Paket 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <img src="One Day Tour Lereng Lawu.webp" alt="Leisure" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full">Leisure & Culture</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2">One Day Tour Lereng Lawu</h3>
+                            <p class="text-gray-600 text-sm mb-4">Menjelajahi keindahan Candi Cetho, Air Terjun Jumog, dan menikmati kebun teh Ngargoyoso.</p>
+                            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Transportasi Lokal AC</li>
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Tiket Masuk Seluruh Destinasi</li>
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Tour Guide & Dokumentasi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-4">
+                        <span class="text-xl font-bold text-emerald-700">Rp 275.000 <span class="text-xs font-normal text-gray-500">/ orang</span></span>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20One%20Day%20Tour%20Lawu" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 transition">Pesan</a>
+                    </div>
+                </div>
+                <!-- Paket 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <img src="Campervan & Camping Santai.webp" alt="Camping" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full">Camping Ground</span>
+                            <h3 class="text-xl font-bold text-gray-900 mt-3 mb-2">Campervan & Camping Santai</h3>
+                            <p class="text-gray-600 text-sm mb-4">Nikmati malam di kaki Gunung Lawu dengan fasilitas camping eksklusif dan api unggun hangat.</p>
+                            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Lahan Camping Private</li>
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Set Tenda Mewah & Sleeping Bag</li>
+                                <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> 2x Makan & Jagung Bakar</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-100 mt-4">
+                        <span class="text-xl font-bold text-emerald-700">Rp 350.000 <span class="text-xs font-normal text-gray-500">/ orang</span></span>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Camping%20Lawu" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 transition">Pesan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITIES SECTION -->
+    <section id="fasilitas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold tracking-wider text-sm uppercase">Fasilitas Utama</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Fasilitas Pendukung di Kawasan Wisata Lawu</h2>
+                <p class="text-gray-600 mt-2">Kami memastikan kenyamanan dan keamanan Anda selama berwisata maupun mendaki Gunung Lawu.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-emerald-50 p-6 rounded-2xl text-center hover:bg-emerald-100 transition">
+                    <div class="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pos SAR & Keamanan</h3>
+                    <p class="text-gray-600 text-sm">Tim SAR siaga di setiap jalur pendakian utama untuk memantau keselamatan pendaki.</p>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-2xl text-center hover:bg-emerald-100 transition">
+                    <div class="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Sumber Air Bersih</h3>
+                    <p class="text-gray-600 text-sm">Tersedia titik mata air jernih di beberapa pos pendakian dan area peristirahatan.</p>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-2xl text-center hover:bg-emerald-100 transition">
+                    <div class="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Warung & Basecamp</h3>
+                    <p class="text-gray-600 text-sm">Warung legendaris (seperti Warung Mbok Yem di puncak) dan basecamp yang nyaman.</p>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-2xl text-center hover:bg-emerald-100 transition">
+                    <div class="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md">
+                        <i class="fa-solid fa-square-parking"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Area Parkir Luas</h3>
+                    <p class="text-gray-600 text-sm">Lahan parkir kendaraan roda dua maupun roda empat yang aman dan dijaga 24 jam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION (BARU DIBAWAH FACILITIES) -->
+    <section id="galeri" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold tracking-wider text-sm uppercase">Dokumentasi</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Galeri Keindahan Gunung Lawu</h2>
+                <p class="text-gray-600 mt-2">Potret keindahan panorama alam, savana, lautan awan, dan destinasi populer di sekitar Gunung Lawu.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Foto 1 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64">
+                    <img src="Puncak Hargo Dumilah.webp" alt="Puncak Lawu" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">Puncak Hargo Dumilah</p>
+                    </div>
+                </div>
+                <!-- Foto 2 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64">
+                    <img src="Savana Lawu.webp" alt="Savana Lawu" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">Savana & Jalur Pendakian</p>
+                    </div>
+                </div>
+                <!-- Foto 3 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64">
+                    <img src="Kawasan Candi Bersejarah Lawu.webp" alt="Candi Cetho" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">Kawasan Candi Bersejarah</p>
+                    </div>
+                </div>
+                <!-- Foto 4 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64">
+                    <img src="Camping Ground Lereng Lawu.webp" alt="Camping Lawu" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">Camping Ground Lereng Lawu</p>
+                    </div>
+                </div>
+                <!-- Foto 5 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64">
+                    <img src="Pesona Sunrise di Atas Awan Lawu.webp" alt="Sunrise Lawu" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">Pesona Sunrise di Atas Awan</p>
+                    </div>
+                </div>
+                <!-- Foto 6 -->
+                <div class="relative overflow-hidden rounded-2xl shadow-md group h-64">
+                    <img src="Kebun Teh Ngargoyoso.webp" alt="Kebun Teh" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                     <p class="text-white font-semibold text-lg">Kebun Teh Ngargoyoso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold tracking-wider text-sm uppercase">Testimoni</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Apa Kata Wisatawan & Pendaki?</h2>
+                <p class="text-gray-600 mt-2">Pengalaman nyata dari mereka yang telah menjelajahi keindahan jalur dan puncak Gunung Lawu.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- Kartu 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Jalur Cemoro Sewu fasilitasnya tertata dan jelas, jalurnya didominasi tangga bebatuan yang kokoh. Cocok buat pendaki yang mencari tantangan dengan fasilitas basecamp yang sangat memadai."</p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Januar Aziz</h4>
+                            <p class="text-xs text-gray-500">Pendaki Gunung</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Pemandangan di puncaknya luar biasa juara! Suasana pagi hari disambut burung jalak khas Lawu, plus bisa mampir menikmati pecel hangat legendaris di Warung Mbok Yem. Pengalaman yang tidak terlupakan."</p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Dhimas Wirawan</h4>
+                            <p class="text-xs text-gray-500">Traveler & Pendaki</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Wisata di sekitar lereng Lawu udaranya sejuk banget khas pegunungan Tawangmangu. Banyak warung di sepanjang trek dan panorama alamnya sangat memukau mata."</p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Agna Prasetya</h4>
+                            <p class="text-xs text-gray-500">Wisatawan Pegunungan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG / INFORMASI TERBARU SECTION -->
+    <section id="blog" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-600 font-semibold tracking-wider text-sm uppercase">Informasi Terbaru</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Informasi Terbaru Gunung Lawu</h2>
+                <p class="text-gray-600 mt-2">Update penting, panduan jalur, dan kabar terkini seputar kawasan wisata serta pendakian Gunung Lawu.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- Kartu 1 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <img src="Pemberlakuan.webp" alt="Sistem Booking Online" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Terbaru 2026</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Pemberlakuan Sistem E-Retribusi & Booking Online Pendakian</h3>
+                            <p class="text-gray-600 text-sm">Perhutani dan pengelola jalur memperketat keamanan dengan sistem registrasi online untuk pendaki via Cemoro Sewu dan Cemoro Kandang.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- Kartu 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <img src="imbauan.webp" alt="Kebakaran & Mitigasi" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Siaga Cuaca</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Imbauan Mitigasi Cuaca Ekstrem & Larangan Bawa Api Unggun</h3>
+                            <p class="text-gray-600 text-sm">Tim relawan dan pengelola memperketat pengawasan logistik pendaki guna mencegah potensi kebakaran hutan di savana Lawu.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- Kartu 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <img src="Revitalisasi.webp" alt="Revitalisasi Wisata" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Destinasi</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Revitalisasi Jalur Wisata & Area Kuliner Lereng Lawu</h3>
+                            <p class="text-gray-600 text-sm">Kawasan wisata Ngargoyoso dan Tawangmangu menambah fasilitas kenyamanan rest area serta sentra oleh-oleh lokal.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-semibold tracking-wider text-sm uppercase">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Pertanyaan yang Sering Diajukan</h2>
+                <p class="text-gray-600 mt-2">Temukan jawaban seputar perizinan, cuaca, dan persiapan wisata ke Gunung Lawu.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 text-left font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none">
+                        <span>Berapa ketinggian Gunung Lawu?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+                        Gunung Lawu memiliki ketinggian 3.265 mdpl dengan puncak tertingginya bernama Puncak Hargo Dumilah.
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 text-left font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none">
+                        <span>Apa saja jalur pendakian resmi Gunung Lawu?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+                        Jalur pendakian resmi yang populer meliputi Cemoro Sewu (Magetan), Cemoro Kandang (Karanganyar), Candi Cetho (Karanganyar), dan Tambak (Ngawi).
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 text-left font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none">
+                        <span>Bagaimana cara memesan paket wisata atau pendakian?</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+                        Anda dapat langsung mengklik tombol "Pesan" pada paket yang diinginkan atau menghubungi admin kami melalui tombol WhatsApp yang tersedia di pojok kanan bawah.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section id="kontak" class="py-20 bg-emerald-800 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Siap Menjelajahi Keindahan Gunung Lawu?</h2>
+            <p class="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">Rencanakan liburan atau pendakian impian Anda bersama kami sekarang juga. Dapatkan penawaran khusus dan guide berpengalaman.</p>
+            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20berkonsultasi%20tentang%20wisata%20Gunung%20Lawu" target="_blank" class="bg-white text-emerald-900 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-emerald-50 transition inline-flex items-center gap-3">
+                <i class="fa-brands fa-whatsapp text-2xl text-emerald-600"></i> Hubungi Kami via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-mountain-sun text-emerald-500"></i> Wisata Lawu
+                    </h3>
+                    <p class="text-sm">Platform informasi lengkap dan penyedia paket wisata resmi serta pendakian Gunung Lawu.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Menu Utama</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About</a></li>
+                        <li><a href="#paket" class="hover:text-white transition">Paket Wisata</a></li>
+                        <li><a href="#fasilitas" class="hover:text-white transition">Fasilitas</a></li>
+                        <li><a href="#galeri" class="hover:text-white transition">Galeri</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Destinasi Populer</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Puncak Hargo Dumilah</a></li>
+                        <li><a href="#" class="hover:text-white transition">Candi Cetho & Sukuh</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cemoro Sewu & Kandang</a></li>
+                        <li><a href="#" class="hover:text-white transition">Grojogan Sewu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontak Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-location-dot mr-2 text-emerald-500"></i> Karanganyar & Magetan, Jatim/Jateng</li>
+                        <li><i class="fa-solid fa-phone mr-2 text-emerald-500"></i> +62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope mr-2 text-emerald-500"></i> info@wisatalawu.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 Wisata Lawu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS (WhatsApp & Back to Top) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20butuh%20informasi%20wisata%20Gunung%20Lawu" target="_blank" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition transform hover:scale-110" title="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <!-- Back to Top Button (Ukuran disamakan & setengah transparan) -->
+        <button id="back-to-top" class="hidden bg-emerald-700/60 hover:bg-emerald-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition transform hover:scale-110 backdrop-blur-sm" title="Kembali ke Atas">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- JAVASCRIPT INTERACTIVITY -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Back to Top Button Logic
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Counter Animation for Stats Section
+        const counters = document.querySelectorAll('.counter');
+        let speed = 200;
+
+        const startCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Trigger counter when scrolled into view
+        let counted = false;
+        window.addEventListener('scroll', () => {
+            const statsSection = document.querySelector('.bg-emerald-900');
+            const sectionPos = statsSection.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+
+            if (sectionPos < screenPos && !counted) {
+                startCounters();
+                counted = true;
+            }
+        });
+    </script>
+</body>
+</html>

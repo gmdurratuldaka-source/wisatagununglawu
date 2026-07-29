@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Informasi Pendakian Gunung Lawu - Wisata Lawu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            overflow-x: hidden; 
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Brand / Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-emerald-700 flex items-center gap-2">
+                        <i class="fa-solid fa-mountain-sun"></i> Wisata Lawu
+                    </a>
+                </div>
+                <!-- Nav Links -->
+                <div class="hidden md:flex space-x-8 items-center font-medium">
+                    <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition">About</a>
+                    <a href="paket.html" class="text-gray-600 hover:text-emerald-600 transition">Paket</a>
+                    <a href="fasilitas.html" class="text-gray-600 hover:text-emerald-600 transition">Fasilitas</a>
+                    <a href="blog.html" class="text-emerald-600 font-semibold transition">Blog</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block py-2 text-gray-600">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600">About</a>
+            <a href="paket.html" class="block py-2 text-gray-600">Paket</a>
+            <a href="fasilitas.html" class="block py-2 text-gray-600">Fasilitas</a>
+            <a href="blog.html" class="block py-2 text-emerald-600 font-semibold">Blog</a>
+        </div>
+    </nav>
+
+    <!-- HERO BLOG -->
+    <section class="relative bg-cover bg-center h-[60vh] flex items-center justify-center text-center text-white pt-20" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Gunung_lawu.webp');">
+        <div class="max-w-4xl px-4">
+            <span class="bg-emerald-600 text-xs uppercase tracking-widest px-3 py-1 rounded-full font-semibold mb-4 inline-block">Artikel & Berita</span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Blog & Informasi Gunung Lawu</h1>
+            <p class="text-base sm:text-lg text-gray-200">Dapatkan update seputar jalur pendakian, tips keselamatan, dan berita terbaru kawasan wisata lereng Lawu.</p>
+        </div>
+    </section>
+
+    <!-- SEARCH & FILTER SECTION -->
+    <section class="bg-emerald-950 py-6 border-b border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
+                <!-- Filter Badges -->
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 w-full lg:w-auto overflow-x-auto pb-2 lg:pb-0">
+                    <button data-filter="all" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium bg-emerald-700 text-white hover:bg-emerald-800 transition whitespace-nowrap shadow-sm">Semua</button>
+                    <button data-filter="regulasi" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium bg-emerald-900/80 text-white hover:bg-emerald-800 transition whitespace-nowrap">Regulasi & Tiketing</button>
+                    <button data-filter="konservasi" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium bg-emerald-900/80 text-white hover:bg-emerald-800 transition whitespace-nowrap">Konservasi & Alam</button>
+                    <button data-filter="destinasi" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium bg-emerald-900/80 text-white hover:bg-emerald-800 transition whitespace-nowrap">Destinasi & Jalur</button>
+                </div>
+                <!-- Search Bar -->
+                <div class="relative w-full lg:w-80">
+                    <input type="text" id="search-input" placeholder="Cari artikel..." class="w-full bg-emerald-900/80 text-white placeholder-gray-300 text-sm rounded-full pl-5 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-lime-400 border border-emerald-800">
+                    <button id="search-btn" class="absolute right-4 top-1/2 -translate-y-1/2 text-lime-400 hover:text-lime-300">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG CONTENT SECTION -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Container Grid Artikel (Setiap card artikel diberi class "blog-card" dan attribute data-category) -->
+            <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Artikel 1: E-Ticketing -->
+                <div class="blog-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between" data-category="regulasi">
+                    <div>
+                        <a href="e-ticketing-lawu.html">
+                            <img src="Pemberlakuan.webp" alt="Sistem E-Ticketing Gunung Lawu" class="w-full h-48 object-cover hover:opacity-95 transition">
+                        </a>
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Regulasi Terbaru</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">
+                                <a href="e-ticketing-lawu.html" class="hover:text-emerald-600 transition">Pemberlakuan Sistem E-Ticketing & Pendaftaran Online Pendakian Lawu</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">Pengelola memperketat aspek keamanan dan manajemen pendaki melalui penerapan sistem reservasi digital di pos Cemoro Sewu dan Cemoro Kandang.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-between items-center">
+                        <a href="e-ticketing-lawu.html" class="text-emerald-600 hover:text-emerald-700 font-semibold text-sm inline-flex items-center gap-1">
+                            Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artikel 2: Karhutla -->
+                <div class="blog-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between" data-category="konservasi">
+                    <div>
+                        <a href="karhutla-lawu.html">
+                            <img src="Mewaspadai.webp" alt="Mitigasi Karhutla Lereng Lawu" class="w-full h-48 object-cover hover:opacity-95 transition">
+                        </a>
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Siaga Konservasi</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">
+                                <a href="karhutla-lawu.html" class="hover:text-emerald-600 transition">Mewaspadai Potensi Karhutla & Larangan Membawa Alat Pemicu Api</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">Petugas gabungan dan relawan menggalakkan pembuatan ilaran serta patroli ketat di kawasan savana untuk mengantisipasi ancaman kebakaran hutan musim kemarau.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-between items-center">
+                        <a href="karhutla-lawu.html" class="text-emerald-600 hover:text-emerald-700 font-semibold text-sm inline-flex items-center gap-1">
+                            Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artikel 3: Wisata & Kuliner -->
+                <div class="blog-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col justify-between" data-category="destinasi">
+                    <div>
+                        <a href="wisata-lawu.html">
+                            <img src="Revitalisasi.webp" alt="Pengembangan Wisata Tawangmangu & Ngargoyoso" class="w-full h-48 object-cover hover:opacity-95 transition">
+                        </a>
+                        <div class="p-6">
+                            <span class="text-xs text-emerald-600 font-semibold">Destinasi & Kuliner</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">
+                                <a href="wisata-lawu.html" class="hover:text-emerald-600 transition">Revitalisasi Jalur Wisata & Sentra Kuliner Unggulan Lereng Lawu</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">Kawasan wisata Tawangmangu dan Ngargoyoso menghadirkan fasilitas rest area serta penataan pusat oleh-oleh guna meningkatkan kenyamanan wisatawan.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex justify-between items-center">
+                        <a href="wisata-lawu.html" class="text-emerald-600 hover:text-emerald-700 font-semibold text-sm inline-flex items-center gap-1">
+                            Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- NO RESULTS MESSAGE -->
+            <div id="no-results" class="hidden text-center py-16">
+                <div class="text-emerald-800 text-5xl mb-4">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Artikel Tidak Ditemukan</h3>
+                <p class="text-gray-600 text-sm">Maaf, artikel yang Anda cari atau filter yang Anda pilih tidak tersedia. Coba kata kunci lain.</p>
+            </div>
+
+            <!-- LOAD MORE BUTTON (AUTO HIDE JIKA ARTIKEL <= 6) -->
+            <div id="load-more-container" class="mt-12 text-center hidden">
+                <button class="w-full bg-emerald-950 hover:bg-emerald-900 text-white py-4 rounded-xl font-medium transition shadow-md flex items-center justify-center gap-2 border border-emerald-900">
+                    Tampilkan artikel selanjutnya <i class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-16 bg-emerald-800 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Siap Menjelajahi Keindahan Gunung Lawu?</h2>
+            <p class="text-emerald-100 mb-8 max-w-2xl mx-auto">Dapatkan penawaran paket pendakian terbaik, pemandu profesional, serta informasi fasilitas lengkap bersama Wisata Lawu sekarang juga.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="paket.html" class="bg-lime-400 text-emerald-950 font-bold px-8 py-3.5 rounded-xl hover:bg-lime-300 transition shadow-lg">Lihat Paket Wisata</a>
+                <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20paket%20wisata%20Gunung%20Lawu" target="_blank" class="bg-transparent border-2 border-white text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-white hover:text-emerald-950 transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-mountain-sun text-emerald-500"></i> Wisata Lawu
+                    </h3>
+                    <p class="text-sm">Platform informasi lengkap dan penyedia paket wisata resmi serta pendakian Gunung Lawu.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Menu Utama</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="paket.html" class="hover:text-white transition">Paket Wisata</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Destinasi Populer</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Puncak Hargo Dumilah</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Candi Cetho & Sukuh</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Cemoro Sewu & Kandang</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontak Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-location-dot mr-2 text-emerald-500"></i> Karanganyar & Magetan</li>
+                        <li><i class="fa-solid fa-phone mr-2 text-emerald-500"></i> +62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope mr-2 text-emerald-500"></i> info@wisatalawu.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 Wisata Lawu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20butuh%20informasi%20wisata%20Gunung%20Lawu" target="_blank" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition transform hover:scale-110" title="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button id="back-to-top" class="hidden bg-emerald-700/60 hover:bg-emerald-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition transform hover:scale-110 backdrop-blur-sm" title="Kembali ke Atas">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- INTERACTIVE SEARCH & FILTER FUNCTIONALITY ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const noResults = document.getElementById('no-results');
+        const loadMoreContainer = document.getElementById('load-more-container');
+
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        function filterAndSearchArticles() {
+            let visibleCount = 0;
+
+            blogCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const tag = card.querySelector('span').textContent.toLowerCase();
+
+                // Check category filter match
+                const matchesCategory = (currentFilter === 'all' || category === currentFilter);
+
+                // Check search keyword match across title, description, or tag
+                const matchesSearch = (
+                    title.includes(searchQuery) || 
+                    description.includes(searchQuery) || 
+                    tag.includes(searchQuery)
+                );
+
+                if (matchesCategory && matchesSearch) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Show or hide "No Results" message
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+                if (loadMoreContainer) loadMoreContainer.classList.add('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                // Auto show load more container if cards count > 6 and all items shown, else hide
+                if (blogCards.length > 6 && currentFilter === 'all' && searchQuery === '') {
+                    loadMoreContainer.classList.remove('hidden');
+                } else {
+                    loadMoreContainer.classList.add('hidden');
+                }
+            }
+        }
+
+        // Event listener for category filter buttons
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state style for buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-emerald-700', 'shadow-sm');
+                    b.classList.add('bg-emerald-900/80');
+                });
+                btn.classList.remove('bg-emerald-900/80');
+                btn.classList.add('bg-emerald-700', 'shadow-sm');
+
+                currentFilter = btn.getAttribute('data-filter');
+                filterAndSearchArticles();
+            });
+        });
+
+        // Event listener for live typing search input
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            filterAndSearchArticles();
+        });
+
+        // Event listener for search button click
+        searchBtn.addEventListener('click', () => {
+            searchQuery = searchInput.value.toLowerCase().trim();
+            filterAndSearchArticles();
+        });
+
+        // Initial check on DOM content loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            filterAndSearchArticles();
+        });
+    </script>
+</body>
+</html>
