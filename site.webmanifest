@@ -1,0 +1,16 @@
+{
+  "name": "Wisata Gunung Lawu",
+  "short_name": "Wisata Lawu",
+  "description": "Portal Resmi Informasi Wisata, Pendakian, & E-Ticketing Gunung Lawu (3.265 mdpl)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#047857",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
